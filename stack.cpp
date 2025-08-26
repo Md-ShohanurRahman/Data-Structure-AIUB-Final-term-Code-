@@ -1,7 +1,9 @@
 #include <iostream>
 using namespace std;
 
-int Stack[100], Top = 0, MaxSize = 100;
+int Stack[100]; 
+int Top = 0;
+int  MaxSize = 100;
 
 bool isEmpty() {
     return (Top == 0);
@@ -13,7 +15,7 @@ bool isFull() {
 
 bool push(int Element) {
     if (isFull()) {
-        cout << "Stack is Full\n";
+        cout << "Stack is Full<<endl";
         return false;
     }
     Stack[Top++] = Element;
@@ -22,7 +24,7 @@ bool push(int Element) {
 
 bool pop() {
     if (isEmpty()) {
-        cout << "Stack empty\n";
+        cout << "Stack empty<<endl";
         return false;
     }
     Top--;
@@ -31,18 +33,18 @@ bool pop() {
 
 int topElement() {
     if (isEmpty()) {
-        cout << "Stack empty\n";
-        return -1; // return a sentinel value if stack is empty
+        cout << "Stack empty<<endl";
+        return -1; 
     }
     return Stack[Top - 1];
 }
 
 void show() {
     if (isEmpty()) {
-        cout << "Stack empty\n";
+        cout << "Stack empty<<endl";
         return;
     }
-    cout << "Stack elements (top to bottom):\n";
+    cout << "Stack elements (top to bottom):<<end";
     for (int i = Top - 1; i >= 0; i--) {
         cout << Stack[i] << endl;
     }
@@ -58,7 +60,7 @@ int main() {
     cout << "Top element: " << topElement() << endl;
 
     pop();
-    cout << "After pop:\n";
+    cout << "After pop:"<<endl;
     show();
 
     return 0;
